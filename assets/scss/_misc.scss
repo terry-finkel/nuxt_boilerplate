@@ -1,0 +1,121 @@
+@import 'margin';
+@import 'text';
+@import 'variables';
+
+@mixin box-shadow($args...) {
+  box-shadow: $args;
+  -moz-box-shadow: $args;
+  -o-box-shadow: $args;
+  -webkit-box-shadow: $args;
+}
+
+@mixin main-shadow {
+  @include box-shadow(0 20px 50px 10px rgba(25, 25, 25, 0.05));
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hide-on-sm-max {
+  @media (max-width: $media-sm-max) {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-md-min {
+  @media (min-width: $media-md-min) {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-md-max {
+  @media (max-width: $media-md-max) {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-lg-min {
+  @media (min-width: $media-lg-min) {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-lg-max {
+  @media (max-width: $media-lg-max) {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-xl-min {
+  @media (min-width: $media-xl-min) {
+    display: none !important;
+  }
+}
+
+@mixin measurements($height, $width: $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin position-absolute-t($top) {
+  position: absolute;
+  top: $top;
+}
+
+@mixin position-absolute-r($right) {
+  position: absolute;
+  right: $right;
+}
+
+@mixin position-absolute-b($bottom) {
+  position: absolute;
+  bottom: $bottom;
+}
+
+@mixin position-absolute-l($left) {
+  position: absolute;
+  left: $left;
+}
+
+@mixin position-absolute-tl($top: 0, $left: $top) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin position-absolute-tr($top: 0, $right: $top) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin position-absolute-bl($bottom: 0, $left: $bottom) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-absolute-br($bottom: 0, $right: $bottom) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin dot-separator($color: $grey-55) {
+  @include flex-center;
+  &:before {
+    @include small-text($color);
+    content: '•';
+    display: block;
+    margin: 0 $margin-2x;
+  }
+}
+
+@mixin pseudo-element-full-cover {
+  @include measurements(100%);
+  @include position-absolute-tl();
+  content: '';
+}

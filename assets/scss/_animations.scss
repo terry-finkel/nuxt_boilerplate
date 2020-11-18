@@ -1,0 +1,31 @@
+@import 'colors';
+@import 'misc';
+
+@mixin animate-container($scale: 1.05) {
+  @include transition(200ms ease-out);
+  &:hover {
+    @include main-shadow;
+    transform: scale($scale);
+  }
+}
+
+@mixin animate-search-job() {
+  @include transition(200ms ease-out);
+  &:hover {
+    @include main-shadow;
+  }
+}
+
+@mixin animation($args...) {
+  animation: $args;
+  -moz-animation: $args;
+  -o-animation: $args;
+  -webkit-animation: $args;
+}
+
+@mixin transition($args...) {
+  transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  -webkit-transition: $args;
+}

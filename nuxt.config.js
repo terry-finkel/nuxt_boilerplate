@@ -1,7 +1,8 @@
 require('dotenv').config()
 
 module.exports = {
-  mode: 'universal',
+  ssr: true,
+
   /*
    ** Headers of the page
    */
@@ -18,18 +19,22 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+
   /*
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
+
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/scss/main.scss'],
+
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [],
+
   /*
    ** Nuxt.js dev-modules
    */
@@ -37,17 +42,19 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
+
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/dotenv',
-    '@nuxtjs/pwa'
+    '@nuxtjs/font-awesome',
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
+    ['nuxt-sass-resources-loader', ['@/assets/scss/main.scss']]
   ],
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -55,12 +62,14 @@ module.exports = {
   axios: {
     proxy: true
   },
+
   /*
    ** Proxy to server
    */
   proxy: {
     '/api': `http://${process.env.NUXT_HOST}:${process.env.NUXT_HTTP_PORT}`
   },
+
   /*
    ** Build configuration
    */
@@ -68,6 +77,11 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      if (ctx.isDev) {
+        config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
+      }
+    },
+    extractCSS: true
   }
 }

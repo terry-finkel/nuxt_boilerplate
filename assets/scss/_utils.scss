@@ -1,0 +1,29 @@
+@import 'misc';
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hide-on-sm-max {
+  @include hide-on-sm-max;
+}
+
+.hide-on-md-min {
+  @include hide-on-md-min;
+}
+
+.hide-on-md-max {
+  @include hide-on-md-max;
+}
+
+.hide-on-lg-min {
+  @include hide-on-lg-min;
+}
+
+.hide-on-lg-max {
+  @include hide-on-lg-max;
+}
+
+.hide-on-xl-min {
+  @include hide-on-xl-min;
+}

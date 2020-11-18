@@ -1,0 +1,15 @@
+$margin-1x: 8px;
+$margin-2x: calc(#{$margin-1x} * 2);
+$margin-3x: calc(#{$margin-1x} * 3);
+$margin-4x: calc(#{$margin-1x} * 4);
+$margin-5x: calc(#{$margin-1x} * 5);
+$margin-6x: calc(#{$margin-1x} * 6);
+$margin-0hx: calc(#{$margin-1x} * 0.5);
+$margin-1hx: calc(#{$margin-1x} * 1.5);
+$margin-2hx: calc(#{$margin-1x} * 2.5);
+$margin-3hx: calc(#{$margin-1x} * 3.5);
+$margin-4hx: calc(#{$margin-1x} * 4.5);
+$margin-5hx: calc(#{$margin-1x} * 5.5);
+
+$default-responsive-margin-h: $margin-2x;
+$default-responsive-margin-v: $margin-3x;

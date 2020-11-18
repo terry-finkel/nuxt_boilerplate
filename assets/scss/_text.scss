@@ -1,0 +1,133 @@
+@import 'colors.scss';
+
+$main-font: 'Nunito Sans', sans-serif;
+$main-line-height: 1.5;
+$small-line-height: 1.67;
+$medium-line-height: 1.71;
+$large-line-height: 1.75;
+$extra-large-line-height: 1.78;
+$small-font-size: 12px;
+$medium-font-size: 14px;
+$large-font-size: 16px;
+$extra-large-font-size: 18px;
+
+@mixin main-text($color: $grey-90) {
+  font-family: $main-font;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin bold-text($color: $grey-90) {
+  font-family: $main-font;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin small-text($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $small-font-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $small-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin small-text-bold($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $small-font-size;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $small-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin medium-text($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $medium-font-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $medium-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin medium-text-bold($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $medium-font-size;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $medium-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin large-text($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $large-font-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $large-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin large-text-bold($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $large-font-size;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $large-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin extra-large-text($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $extra-large-font-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $extra-large-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin extra-large-text-bold($color: $grey-90) {
+  font-family: $main-font;
+  font-size: $extra-large-font-size;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $extra-large-line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin custom-text($font-size, $line-height: $main-line-height, $font-weight: normal, $color: $grey-90) {
+  font-family: $main-font;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $line-height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin title-text($color: $grey-90) {
+  @include custom-text(28px, 1.43, bold, $color);
+}
