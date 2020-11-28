@@ -1,6 +1,6 @@
-# nuxt_starter_kit
+# nuxt_boilerplate
 
-> Starting kit for Nuxt.JS
+> Starting kit for Nuxt.JS, with Express.js, Axios, ESLint, Prettier, SASS
 
 ## Build Setup
 
